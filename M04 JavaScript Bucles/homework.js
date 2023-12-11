@@ -57,10 +57,10 @@ function saludo(idioma) {
    if (idioma==="aleman"){
     return "Guten Tag!"
    }
-   if (idioma==="mandarin"){
+   else if (idioma==="mandarin"){
       return "Ni Hao!"
    }
-   if (idioma==="ingles"){
+   else if (idioma==="ingles"){
       return "Hello!"  
    }
    else {
@@ -129,7 +129,7 @@ function esEntero(num) {
    if (Math.floor(num)){
       return true;
    }
-   if (num === 0){
+    else if (num === 0){
       return true;
    }
    
@@ -147,10 +147,10 @@ function fizzBuzz(num) {
    if (num %3===0 && num %5===0){
       return "fizzbuzz";
    }
-   if (num %3===0){
+   else if (num %3===0){
       return "fizz";
    }
-   if(num %5===0){
+   else if(num %5===0){
       return "buzz";
    }
    else{
@@ -169,14 +169,14 @@ function operadoresLogicos(num1, num2, num3) {
    if (num1 > num2 && num1 > num3 && num1 > 0 ){
       return "Numero 1 es mayor y positivo"
    }
-   if (num1 <0 || num2 <0 || num3 <0 ){
+   else if (num1 <0 || num2 <0 || num3 <0 ){
       return "Hay negativos"
     }
-   if (num3 > num1 && num3 > num2){
+   else if (num3 > num1 && num3 > num2){
       
       return (num3 + 1)
    }
-    if (num1 == 0 && num2 == 0 && num3 == 0){ 
+   else if (num1 == 0 && num2 == 0 && num3 == 0){ 
       return "Error"
    }
    else {
@@ -191,10 +191,12 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
-   if(num <=1){
+   if(num <= 1){
+      //tambien puede ser if (num <2)
       return false
    }
-   for (let i=2 ; i <= num/2; i++){
+   for (let i=2 ; i <= num/2 ; i++){
+      //tambien puede ser i < num
       if(num % i === 0){
          return false;   
       }
@@ -214,7 +216,7 @@ function esVerdadero(valor) {
    }
 }
 
-function tieneTresDigitos(num) {
+function tieneTresDigitos(num) { 
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
@@ -224,6 +226,15 @@ function tieneTresDigitos(num) {
    else{
       return false
    }
+   //otra forma de resolver
+   // return num >= 100 && num <= 999;
+   // otra forma pasando a string y luego contar los digitos con length
+   // var numString = num.tostring();
+   // if (numString.length === 3){
+    //  return true
+   //} return false
+
+    
    
 }
 
@@ -240,6 +251,13 @@ function doWhile(num) {
 
  } while(contador<8)
  return resultado;
+ // otra forma de resolver(no hace falta crear una variable para num puedo poner num directamente ya que va a valer lo mismo)
+ //var contador=0
+ //do{
+   //num=num+5;
+  // contador ++;
+ //}whilw (contador < 8);
+ // return num
 }
 
 
