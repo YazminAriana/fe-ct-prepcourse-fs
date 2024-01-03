@@ -314,10 +314,10 @@ function breakStatement(num) {
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
      
-   let resultado = num;
-   for( let i = 1 ; i <= 10 ; i++){
+   let nuevoValor = [];
+   for( let i = 0 ; i < 10 ; i++){
        resultado = resultado + 2; 
-        nuevoValor.push(resultado[i]);
+        nuevoValor.push(resultado);
         if(resultado === i) {
          return "Se interrumpió la ejecución"
               };
